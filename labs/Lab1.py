@@ -34,6 +34,9 @@ try:
     graphviz_installed = True # Set this to False if you don't have graphviz
 except:
     graphviz_installed = False
+    
+from pathlib import Path
+home = str(Path.home())
 
 # + [markdown] slideshow={"slide_type": "subslide"}
 # ### Read in the book files for testing purposes
@@ -41,9 +44,9 @@ except:
 # + slideshow={"slide_type": "subslide"}
 from os import path
 book_files = []
-for book in open("../data/gutenberg/order.txt").read().split("\n"):
-    if path.isfile(f'../data/gutenberg/{book}-0.txt'):
-        book_files.append(f'../data/gutenberg/{book}-0.txt')
+for book in open(f"{home}/csc-369-student/data/gutenberg/order.txt").read().split("\n"):
+    if path.isfile(f'{home}/csc-369-student/data/gutenberg/{book}-0.txt'):
+        book_files.append(f'{home}/csc-369-student/data/gutenberg/{book}-0.txt')
 
 
 # + [markdown] slideshow={"slide_type": "subslide"}
@@ -164,10 +167,12 @@ group1_results = json.load(open("group1.json"))
 
 group1_results['things']
 
-
 # **You can run the files in parallel using**
 
-# !parallel "python lab1_exercise5.py {} > {/}.json" ::: "../data/gutenberg/group1" "../data/gutenberg/group2" "../data/gutenberg/group3"
+# !ls ~/csc-369-student/data/gutenberg/group1
+
+# !parallel "python lab1_exercise5.py {} > {/}.json" ::: "$HOME/csc-369-student/data/gutenberg/group1" "$HOME/csc-369-student/data/gutenberg/group2" "$HOME/csc-369-student/data/gutenberg/group3"
+            
 
 # + slideshow={"slide_type": "subslide"}
 def merge():
