@@ -64,6 +64,7 @@ def read_line_at_pos(book, pos):
 
 ```python slideshow={"slide_type": "subslide"}
 read_line_at_pos(book_files[0],100)
+# Way to get started!
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -112,7 +113,7 @@ def merged_inverted_index(book_files):
 
 ```python slideshow={"slide_type": "subslide"}
 index = merged_inverted_index(book_files)
-
+# Getting there!
 ```
 
 ```python
@@ -206,7 +207,7 @@ def merge():
 
 ```python
 index = merge()
-
+# You've done!
 ```
 
 ```python slideshow={"slide_type": "subslide"}

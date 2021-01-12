@@ -22,7 +22,7 @@ def test_exercise_2():
 
 def test_exercise_3():
     index = merged_inverted_index(book_files)
-    assert set(index.keys()) == set(answers['exercise_3'].keys())
+    assert set(index.keys()) == answers['exercise_3']
     
 def test_exercise_4():
     lines = get_lines(index,'things')
@@ -32,4 +32,4 @@ def test_exercise_5():
     r = os.system('parallel "python lab1_exercise5.py {} > {/}.json" ::: "../data/gutenberg/group1" "../data/gutenberg/group2" "../data/gutenberg/group3"')
     index = Lab1.merge()
     lines = get_lines(index,'things')
-    assert r == 0 && set(lines) == set(get_lines(answers["answer_exercise_5"],'things'))
+    assert r == 0 && set(lines) == answers['exercise_5']

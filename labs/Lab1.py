@@ -60,6 +60,7 @@ def read_line_at_pos(book, pos):
 
 # + slideshow={"slide_type": "subslide"}
 read_line_at_pos(book_files[0],100)
+# Way to get started!
 
 # + [markdown] slideshow={"slide_type": "subslide"}
 # **Notice that readline reads from the current position until the end of the line.** For the inverted index, you'll want to make sure to record only the positions that get you to the beginning of the line.
@@ -104,7 +105,7 @@ def merged_inverted_index(book_files):
 
 # + slideshow={"slide_type": "subslide"}
 index = merged_inverted_index(book_files)
-
+# Getting there!
 # -
 
 import pandas as pd
@@ -179,7 +180,7 @@ def merge():
 # -
 
 index = merge()
-
+# You've done!
 
 # + slideshow={"slide_type": "subslide"}
 index['things']
