@@ -38,6 +38,18 @@ except:
     
 from pathlib import Path
 home = str(Path.home())
+
+def isnotebook():
+    try:
+        shell = get_ipython().__class__.__name__
+        if shell == 'ZMQInteractiveShell':
+            return True   # Jupyter notebook or qtconsole
+        elif shell == 'TerminalInteractiveShell':
+            return False  # Terminal running IPython
+        else:
+            return False  # Other type (?)
+    except NameError:
+        return False      # Probably standard Python interpreter
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -188,11 +200,9 @@ We can easily read these back into Python by relying on the JSON format. While m
 
 ```python
 import json
-group1_results = json.load(open("group1.json"))
-```
-
-```python
-group1_results['things']
+if isnotebook():
+    group1_results = json.load(open("group1.json"))
+    group1_results['things']
 ```
 
 **You can run the files in parallel using**
@@ -207,10 +217,14 @@ group1_results['things']
 ```
 
 ```python slideshow={"slide_type": "subslide"}
+import os
 def merge():
     index = {}
-    for file in ["group1.json","group2.json","group3.json"]:
-        # YOUR SOLUTION HERE
+    r = os.system('parallel "python Lab1_exercise5.py {} > {/}.json" ::: "$HOME/csc-369-student/data/gutenberg/group1" "$HOME/csc-369-student/data/gutenberg/group2" "$HOME/csc-369-student/data/gutenberg/group3"')
+    if r == 0:
+        for file in ["group1.json","group2.json","group3.json"]:
+            # YOUR SOLUTION HERE
+        os.system("rm group1.json group2.json group3.json")
     return index
 ```
 
