@@ -14,7 +14,7 @@ import joblib
 answers = joblib.load(str(DIR)+"/answers_Lab1.joblib")
 
 def test_exercise_1():
-    assert Lab1.read_line_at_pos(book_files[1],100) == answers['exercise_1']
+    assert Lab1.read_line_at_pos(book_files[0],100) == answers['exercise_1']
     
 def test_exercise_2():
     index = Lab1.inverted_index(book_files[0])
