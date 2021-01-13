@@ -66,8 +66,9 @@ def read_line_at_pos(book, pos):
 ```
 
 ```python slideshow={"slide_type": "subslide"}
-read_line_at_pos(book_files[0],100)
+line = read_line_at_pos(book_files[0],100)
 # Way to get started!
+line
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -162,25 +163,25 @@ Write a Python script that I can execute using Parallel in the following manner.
 **Here are the three groups.** Each directory has about 25 books. We could distribute these to different machines in a cluster, but you get the idea without that step.
 
 ```python
-!ls -d ../data/gutenberg/group*
+!ls -d $HOME/csc-369-student/data/gutenberg/group*
 ```
 
 ```python
-!ls ../data/gutenberg/group1
+!ls $HOME/csc-369-student/data/gutenberg/group1
 ```
 
 ```python
-!ls ../data/gutenberg/group2
+!ls $HOME/csc-369-student/data/gutenberg/group2
 ```
 
 ```python
-!ls ../data/gutenberg/group3
+!ls $HOME/csc-369-student/data/gutenberg/group3
 ```
 
 **Running a single directory:** You can run a single directory with the following command and store the results to a file.
 
 ```python slideshow={"slide_type": "subslide"}
-!python lab1_exercise5.py ../data/gutenberg/group1 > group1.json
+!python Lab1_exercise5.py $HOME/csc-369-student/data/gutenberg/group1 > group1.json
 ```
 
 We can easily read these back into Python by relying on the JSON format. While more strict than Python dictionaries. They are very similar for our purposes (<a href="https://www.json.org/json-en.html">https://www.json.org/json-en.html</a>. 
@@ -197,11 +198,11 @@ group1_results['things']
 **You can run the files in parallel using**
 
 ```python
-!ls ~/csc-369-student/data/gutenberg/group1
+!ls $HOME/csc-369-student/data/gutenberg/group1
 ```
 
 ```python
-!parallel "python lab1_exercise5.py {} > {/}.json" ::: "$HOME/csc-369-student/data/gutenberg/group1" "$HOME/csc-369-student/data/gutenberg/group2" "$HOME/csc-369-student/data/gutenberg/group3"
+!parallel "python Lab1_exercise5.py {} > {/}.json" ::: "$HOME/csc-369-student/data/gutenberg/group1" "$HOME/csc-369-student/data/gutenberg/group2" "$HOME/csc-369-student/data/gutenberg/group3"
             
 ```
 
