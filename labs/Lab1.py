@@ -99,7 +99,6 @@ if isnotebook():
 
 # Read in the file once and build a list of line offsets
 def inverted_index(book):
-    file = open(book,encoding="utf-8")
     index = {}
     # YOUR SOLUTION HERE
     # Check out https://stackoverflow.com/a/40546814/9864659 for inspiration using seek and tell
