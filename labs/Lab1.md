@@ -78,9 +78,10 @@ def read_line_at_pos(book, pos):
 ```
 
 ```python slideshow={"slide_type": "subslide"}
-line = read_line_at_pos(book_files[0],100)
-# Way to get started!
-line
+if isnotebook():
+    line = read_line_at_pos(book_files[0],100)
+    # Way to get started!
+    line
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -88,7 +89,8 @@ line
 <!-- #endregion -->
 
 ```python slideshow={"slide_type": "subslide"}
-read_line_at_pos(book_files[0],95)
+if isnotebook():
+    read_line_at_pos(book_files[0],95)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -108,8 +110,9 @@ def inverted_index(book):
 ```
 
 ```python slideshow={"slide_type": "subslide"}
-index = inverted_index(book_files[0])
-index['things']
+if isnotebook():
+    index = inverted_index(book_files[0])
+    index['things']
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -124,27 +127,32 @@ def merged_inverted_index(book_files):
     for book in book_files:
         book_index = inverted_index(book)
         # YOUR SOLUTION HERE
+        pass
     return index
 ```
 
 ```python slideshow={"slide_type": "subslide"}
-index = merged_inverted_index(book_files)
-# Getting there!
+if isnotebook():
+    index = merged_inverted_index(book_files)
+    # Getting there!
 ```
 
 ```python
-import pandas as pd
-pd.Series(index.keys())
+if isnotebook():
+    import pandas as pd
+    pd.Series(index.keys())
 ```
 
 ```python
-index['things']
+if isnotebook():
+    index['things']
 ```
 
 ```python slideshow={"slide_type": "subslide"}
-import pandas as pd
-# I am only using pandas here to make this display nicely on our screens
-pd.Series(index['things'])
+if isnotebook():
+    import pandas as pd
+    # I am only using pandas here to make this display nicely on our screens
+    pd.Series(index['things'])
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -158,12 +166,14 @@ def get_lines(index,word):
     lines = []
     for book in index[word]:
         # YOUR SOLUTION HERE
+        pass
     return lines
 ```
 
 ```python
-lines = get_lines(index,'things')
-lines
+if isnotebook():
+    lines = get_lines(index,'things')
+    lines
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -224,17 +234,20 @@ def merge():
     if r == 0:
         for file in ["group1.json","group2.json","group3.json"]:
             # YOUR SOLUTION HERE
+            pass
         os.system("rm group1.json group2.json group3.json")
     return index
 ```
 
 ```python
-index = merge()
-# You've done it!
+if isnotebook():
+    index = merge()
+    # You've done it!
 ```
 
 ```python slideshow={"slide_type": "subslide"}
-index['things']
+if isnotebook():
+    index['things']
 ```
 
 This solution should match your solution above that was single thread, but now you are a rockstar distributed computing wizard who could process thousands of books on a cluster with nothing other than simple Python and GNU parallel.

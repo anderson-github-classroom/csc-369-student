@@ -25,6 +25,7 @@ def test_exercise_3():
     assert set(index.keys()) == answers['exercise_3']
     
 def test_exercise_4():
+    index = Lab1.merged_inverted_index(book_files)    
     lines = Lab1.get_lines(index,'things')
     assert set(lines) == set(answers['exercise_4'])
 

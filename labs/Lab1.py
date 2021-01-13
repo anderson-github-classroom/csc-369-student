@@ -75,15 +75,17 @@ def read_line_at_pos(book, pos):
 
 
 # + slideshow={"slide_type": "subslide"}
-line = read_line_at_pos(book_files[0],100)
-# Way to get started!
-line
+if isnotebook():
+    line = read_line_at_pos(book_files[0],100)
+    # Way to get started!
+    line
 
 # + [markdown] slideshow={"slide_type": "subslide"}
 # **Notice that readline reads from the current position until the end of the line.** For the inverted index, you'll want to make sure to record only the positions that get you to the beginning of the line.
 
 # + slideshow={"slide_type": "subslide"}
-read_line_at_pos(book_files[0],95)
+if isnotebook():
+    read_line_at_pos(book_files[0],95)
 
 
 # + [markdown] slideshow={"slide_type": "subslide"}
@@ -102,8 +104,9 @@ def inverted_index(book):
 
 
 # + slideshow={"slide_type": "subslide"}
-index = inverted_index(book_files[0])
-index['things']
+if isnotebook():
+    index = inverted_index(book_files[0])
+    index['things']
 
 
 # + [markdown] slideshow={"slide_type": "subslide"}
@@ -117,23 +120,28 @@ def merged_inverted_index(book_files):
     for book in book_files:
         book_index = inverted_index(book)
         # YOUR SOLUTION HERE
+        pass
     return index
 
 
 # + slideshow={"slide_type": "subslide"}
-index = merged_inverted_index(book_files)
-# Getting there!
+if isnotebook():
+    index = merged_inverted_index(book_files)
+    # Getting there!
 # -
 
-import pandas as pd
-pd.Series(index.keys())
+if isnotebook():
+    import pandas as pd
+    pd.Series(index.keys())
 
-index['things']
+if isnotebook():
+    index['things']
 
 # + slideshow={"slide_type": "subslide"}
-import pandas as pd
-# I am only using pandas here to make this display nicely on our screens
-pd.Series(index['things'])
+if isnotebook():
+    import pandas as pd
+    # I am only using pandas here to make this display nicely on our screens
+    pd.Series(index['things'])
 
 
 # + [markdown] slideshow={"slide_type": "subslide"}
@@ -146,11 +154,13 @@ def get_lines(index,word):
     lines = []
     for book in index[word]:
         # YOUR SOLUTION HERE
+        pass
     return lines
 
 
-lines = get_lines(index,'things')
-lines
+if isnotebook():
+    lines = get_lines(index,'things')
+    lines
 
 # + [markdown] slideshow={"slide_type": "subslide"}
 # **Exercise 5:**
@@ -196,17 +206,20 @@ def merge():
     if r == 0:
         for file in ["group1.json","group2.json","group3.json"]:
             # YOUR SOLUTION HERE
+            pass
         os.system("rm group1.json group2.json group3.json")
     return index
 
 
 # -
 
-index = merge()
-# You've done it!
+if isnotebook():
+    index = merge()
+    # You've done it!
 
 # + slideshow={"slide_type": "subslide"}
-index['things']
+if isnotebook():
+    index['things']
 # -
 
 # This solution should match your solution above that was single thread, but now you are a rockstar distributed computing wizard who could process thousands of books on a cluster with nothing other than simple Python and GNU parallel.
