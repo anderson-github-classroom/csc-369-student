@@ -32,4 +32,4 @@ def test_exercise_5():
     r = os.system('parallel "python lab1_exercise5.py {} > {/}.json" ::: "../data/gutenberg/group1" "../data/gutenberg/group2" "../data/gutenberg/group3"')
     index = Lab1.merge()
     lines = get_lines(index,'things')
-    assert r == 0 && set(lines) == answers['exercise_5']
+    assert r == 0 and set(lines) == answers['exercise_5']

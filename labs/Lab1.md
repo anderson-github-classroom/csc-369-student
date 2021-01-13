@@ -216,7 +216,7 @@ def merge():
 
 ```python
 index = merge()
-# You've done!
+# You've done it!
 ```
 
 ```python slideshow={"slide_type": "subslide"}
@@ -229,5 +229,5 @@ This solution should match your solution above that was single thread, but now y
 # Don't forget to push!
 ```
 ```python
-
+!rm *.json
 ```

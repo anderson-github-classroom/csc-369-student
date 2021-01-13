@@ -186,7 +186,7 @@ def merge():
 # -
 
 index = merge()
-# You've done!
+# You've done it!
 
 # + slideshow={"slide_type": "subslide"}
 index['things']
@@ -197,4 +197,4 @@ index['things']
 # + slideshow={"slide_type": "skip"}
 # Don't forget to push!
 # -
-
+# !rm *.json
