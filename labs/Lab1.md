@@ -39,10 +39,6 @@ except:
 import os
 from pathlib import Path
 home = str(Path.home())
-print("home:",home)
-print("$HOME",os.getenv('HOME'))
-if home == '/home/runner':
-    home = os.getcwd()
 
 def isnotebook():
     try:
@@ -234,7 +230,7 @@ if isnotebook():
 import os
 def merge():
     index = {}
-    r = os.system('parallel "python Lab1_exercise5.py {} > {/}.json" ::: "$HOME/csc-369-student/data/gutenberg/group1" "$HOME/csc-369-student/data/gutenberg/group2" "$HOME/csc-369-student/data/gutenberg/group3"')
+    r = os.system('parallel "python Lab1_exercise5.py {} > {/}.json" ::: "%s/csc-369-student/data/gutenberg/group1" "%s/csc-369-student/data/gutenberg/group2" "%s/csc-369-student/data/gutenberg/group3"'%(home,home,home))
     if r == 0:
         for file in ["group1.json","group2.json","group3.json"]:
             # YOUR SOLUTION HERE
