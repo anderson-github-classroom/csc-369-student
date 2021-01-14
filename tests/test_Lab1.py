@@ -13,6 +13,13 @@ DIR=pathlib.Path(__file__).parent.absolute()
 import joblib
 answers = joblib.load(str(DIR)+"/answers_Lab1.joblib")
 
+def fix_lines(lines):
+    new_lines = []
+    for line in lines:
+        book = line[0].split("/")[-1]
+        new_lines.append((book,line[1]))
+    return new_lines
+
 def test_exercise_1():
     assert Lab1.read_line_at_pos(book_files[0],100) == answers['exercise_1']
     
@@ -26,10 +33,10 @@ def test_exercise_3():
     
 def test_exercise_4():
     index = Lab1.merged_inverted_index(book_files)    
-    lines = Lab1.get_lines(index,'things')
-    assert set(lines) == set(answers['exercise_4'])
+    lines = fix_lines(Lab1.get_lines(index,'things'))
+    assert set(lines) == set(fix_lines(answers['exercise_4']))
 
 def test_exercise_5():
     index = Lab1.merge()
-    lines = Lab1.get_lines(index,'things')
-    assert set(lines) == answers['exercise_5']
+    lines = fix_lines(Lab1.get_lines(index,'things'))
+    assert set(lines) == fix_lines(answers['exercise_5'])
