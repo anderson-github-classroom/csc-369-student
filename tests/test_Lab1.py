@@ -39,4 +39,4 @@ def test_exercise_4():
 def test_exercise_5():
     index = Lab1.merge()
     lines = fix_lines(Lab1.get_lines(index,'things'))
-    assert set(lines) == fix_lines(answers['exercise_5'])
+    assert set(lines) == set(fix_lines(answers['exercise_5']))
