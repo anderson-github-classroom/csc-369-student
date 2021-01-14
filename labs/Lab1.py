@@ -38,6 +38,8 @@ except:
 import os
 from pathlib import Path
 home = str(Path.home())
+print("home:",home)
+print("$HOME",os.getenv('HOME'))
 if home == '/home/runner':
     home = os.getcwd()
 
