@@ -84,7 +84,7 @@ def read_line_at_pos(book, pos):
 if isnotebook():
     line = read_line_at_pos(book_files[0],100)
     # Way to get started!
-    line
+    display(line)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -93,7 +93,7 @@ if isnotebook():
 
 ```python slideshow={"slide_type": "subslide"}
 if isnotebook():
-    read_line_at_pos(book_files[0],95)
+    display(read_line_at_pos(book_files[0],95))
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -114,7 +114,7 @@ def inverted_index(book):
 ```python slideshow={"slide_type": "subslide"}
 if isnotebook():
     index = inverted_index(book_files[0])
-    index['things']
+    display(index['things'])
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -142,19 +142,19 @@ if isnotebook():
 ```python
 if isnotebook():
     import pandas as pd
-    pd.Series(index.keys())
+    display(pd.Series(index.keys()))
 ```
 
 ```python
 if isnotebook():
-    index['things']
+    display(index['things'])
 ```
 
 ```python slideshow={"slide_type": "subslide"}
 if isnotebook():
     import pandas as pd
     # I am only using pandas here to make this display nicely on our screens
-    pd.Series(index['things'])
+    display(pd.Series(index['things']))
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -175,7 +175,7 @@ def get_lines(index,word):
 ```python
 if isnotebook():
     lines = get_lines(index,'things')
-    lines
+    display(lines)
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -214,7 +214,7 @@ We can easily read these back into Python by relying on the JSON format. While m
 import json
 if isnotebook():
     group1_results = json.load(open("group1.json"))
-    group1_results['things']
+    display(group1_results['things'])
 ```
 
 **You can run the files in parallel using**
@@ -249,7 +249,7 @@ if isnotebook():
 
 ```python slideshow={"slide_type": "subslide"}
 if isnotebook():
-    index['things']
+    display(index['things'])
 ```
 
 This solution should match your solution above that was single thread, but now you are a rockstar distributed computing wizard who could process thousands of books on a cluster with nothing other than simple Python and GNU parallel.
@@ -259,4 +259,8 @@ This solution should match your solution above that was single thread, but now y
 ```
 ```python
 !rm *.json
+```
+
+```python
+
 ```

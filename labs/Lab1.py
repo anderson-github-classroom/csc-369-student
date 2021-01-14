@@ -81,14 +81,14 @@ def read_line_at_pos(book, pos):
 if isnotebook():
     line = read_line_at_pos(book_files[0],100)
     # Way to get started!
-    line
+    display(line)
 
 # + [markdown] slideshow={"slide_type": "subslide"}
 # **Notice that readline reads from the current position until the end of the line.** For the inverted index, you'll want to make sure to record only the positions that get you to the beginning of the line.
 
 # + slideshow={"slide_type": "subslide"}
 if isnotebook():
-    read_line_at_pos(book_files[0],95)
+    display(read_line_at_pos(book_files[0],95))
 
 
 # + [markdown] slideshow={"slide_type": "subslide"}
@@ -108,7 +108,7 @@ def inverted_index(book):
 # + slideshow={"slide_type": "subslide"}
 if isnotebook():
     index = inverted_index(book_files[0])
-    index['things']
+    display(index['things'])
 
 
 # + [markdown] slideshow={"slide_type": "subslide"}
@@ -134,16 +134,16 @@ if isnotebook():
 
 if isnotebook():
     import pandas as pd
-    pd.Series(index.keys())
+    display(pd.Series(index.keys()))
 
 if isnotebook():
-    index['things']
+    display(index['things'])
 
 # + slideshow={"slide_type": "subslide"}
 if isnotebook():
     import pandas as pd
     # I am only using pandas here to make this display nicely on our screens
-    pd.Series(index['things'])
+    display(pd.Series(index['things']))
 
 
 # + [markdown] slideshow={"slide_type": "subslide"}
@@ -162,7 +162,7 @@ def get_lines(index,word):
 
 if isnotebook():
     lines = get_lines(index,'things')
-    lines
+    display(lines)
 
 # + [markdown] slideshow={"slide_type": "subslide"}
 # **Exercise 5:**
@@ -191,7 +191,7 @@ if isnotebook():
 import json
 if isnotebook():
     group1_results = json.load(open("group1.json"))
-    group1_results['things']
+    display(group1_results['things'])
 
 # **You can run the files in parallel using**
 
@@ -221,7 +221,7 @@ if isnotebook():
 
 # + slideshow={"slide_type": "subslide"}
 if isnotebook():
-    index['things']
+    display(index['things'])
 # -
 
 # This solution should match your solution above that was single thread, but now you are a rockstar distributed computing wizard who could process thousands of books on a cluster with nothing other than simple Python and GNU parallel.
@@ -230,3 +230,5 @@ if isnotebook():
 # Don't forget to push!
 # -
 # !rm *.json
+
+
