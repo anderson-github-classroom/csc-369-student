@@ -11,6 +11,8 @@ DIR=pathlib.Path(__file__).parent.absolute()
 import joblib 
 answers = joblib.load(str(DIR)+"/answers_Lab2.joblib")
 
+import ray
+
 import glob
 def get_book_files(input_dir):
     return glob.glob(f"{input_dir}/*.txt")
@@ -42,8 +44,7 @@ def counts2set(counts):
     return set(lines)
 
 def test_exercise_1():
-    import ray
-    ray.init()
+    ray.init(ignore_reinit_error=True)
     student = index2set(fix_index(Lab2_helper.merge([group1,group2,group3]),answers['exercise_1_keys']))
     ray.shutdown()
     assert student == index2set(answers['exercise_1'])
@@ -53,8 +54,7 @@ def test_exercise_2():
     assert student == counts2set(answers['exercise_2'])
 
 def test_exercise_3():
-    import ray
-    ray.init()
+    ray.init(ignore_reinit_error=True)
     student = Lab2_helper.merge_count_words([group1,group2,group3])
     ray.shutdown()
     assert counts2set(student) == counts2set(answers['exercise_3'])

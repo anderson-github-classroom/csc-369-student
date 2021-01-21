@@ -28,7 +28,7 @@ import Lab2_helper
 
 # + slideshow={"slide_type": "skip"}
 import ray
-ray.init()
+ray.init(ignore_reinit_error=True)
 
 # + slideshow={"slide_type": "skip"}
 display_available = True
