@@ -2,9 +2,6 @@ import sys
 import os
 sys.path.append(".")
 
-import ray
-ray.init()
-
 # Import the student solutions
 import Lab2_helper
 
@@ -53,6 +50,8 @@ def test_exercise_2():
     assert student == counts2set(answers['exercise_2'])
 
 def test_exercise_3():
+    import ray
+    ray.init()
     student = Lab2_helper.merge_count_words([group1,group2,group3])
     assert counts2set(student) == counts2set(answers['exercise_3'])
-    
+    ray.shutdown()
