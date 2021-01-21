@@ -2,6 +2,9 @@ import sys
 import os
 sys.path.append(".")
 
+import ray
+ray.init()
+
 # Import the student solutions
 import Lab2_helper
 
@@ -29,7 +32,7 @@ def fix_index(index,keys):
     return new_index
 
 def index2set(index):
-    lines = [ ]
+    lines = []
     for key in index.keys():
         for book in index[key]:
             lines.append((key,book,tuple(index[key][book])))
