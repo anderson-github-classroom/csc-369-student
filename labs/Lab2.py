@@ -61,7 +61,7 @@ def isnotebook():
         return False      # Probably standard Python interpreter
     
 import sys
-sys.path.insert(0,f'{home}/csc-369-instructor/tests')
+sys.path.insert(0,f'{home}/csc-369-student/tests')
 
 import test_Lab2
 # -
