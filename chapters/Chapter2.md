@@ -154,13 +154,14 @@ is_prime(6),is_prime(7)
 
 ```python slideshow={"slide_type": "subslide"}
 results = [[],[],[]]
-result_ids = [find.remote(3),find.remote(29),find.remote(2997)]
+result_ids = [find.remote(3)]#,find.remote(50000),find.remote(1000000)]
 result_ids
 ```
 
 ```python slideshow={"slide_type": "subslide"}
 import itertools
-all_results = merged = list(itertools.chain(*ray.get(result_ids)))
+import numpy as np
+all_results = np.unique(list(itertools.chain(*ray.get(result_ids))))
 ```
 
 ```python slideshow={"slide_type": "subslide"}
@@ -189,6 +190,7 @@ while len(values) > 1:
     #import pdb; pdb.set_trace()
     values = [add.remote(values[0], values[1])] + values[2:]
 result = ray.get(values[0])
+result
 ```
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -202,9 +204,9 @@ result = ray.get(values[0])
 ```python slideshow={"slide_type": "fragment"}
 values = [1, 2, 3, 4, 5, 6, 7, 8]
 while len(values) > 1:
-    #import pdb; pdb.set_trace()
     values = values[2:] + [add.remote(values[0], values[1])] # remove 2 and put at end
 result = ray.get(values[0])
+result
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->

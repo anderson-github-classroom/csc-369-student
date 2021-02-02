@@ -6,7 +6,7 @@ def read_line_at_pos(book, pos):
     with open(book,encoding="utf-8") as f:
         # YOUR SOLUTION HERE
         return f.readline()
-    
+
 # Read in the file once and build a list of line offsets
 def inverted_index(book):
     index = {}
