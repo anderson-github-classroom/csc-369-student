@@ -27,7 +27,9 @@ Source: https://www.datadoghq.com/blog/hadoop-architecture-overview/
 <!-- #region slideshow={"slide_type": "subslide"} -->
 ## Ice Breaker
 
-Favorite place for ice cream in SLO
+Favorite place for ice cream in SLO (wait it's too cold for that)...
+
+Favorite place for pizza in SLO
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -36,6 +38,10 @@ While this text can be viewed as PDF, it is most useful to have a Jupyter enviro
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 ### Update on lab grades
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "subslide"} -->
+<img src='../labs/grade_summary.png'>
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->

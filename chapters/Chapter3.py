@@ -26,13 +26,18 @@
 # + [markdown] slideshow={"slide_type": "subslide"}
 # ## Ice Breaker
 #
-# Favorite place for ice cream in SLO
+# Favorite place for ice cream in SLO (wait it's too cold for that)...
+#
+# Favorite place for pizza in SLO
 
 # + [markdown] slideshow={"slide_type": "subslide"}
 # While this text can be viewed as PDF, it is most useful to have a Jupyter environment. I have an environment ready for each of you, but you can get your own local environment going in several ways. One popular way is with Anaconda (<a href="https://www.anaconda.com/">https://www.anaconda.com/</a>. Because of the limited time, you can use my server.
 
 # + [markdown] slideshow={"slide_type": "subslide"}
 # ### Update on lab grades
+
+# + [markdown] slideshow={"slide_type": "subslide"}
+# <img src='../labs/grade_summary.png'>
 
 # + [markdown] slideshow={"slide_type": "slide"}
 # ## What's wrong with our previous approaches?
