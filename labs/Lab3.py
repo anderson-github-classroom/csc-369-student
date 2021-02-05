@@ -119,4 +119,24 @@ import Lab3_helper
 #
 # Let's do something different now :) Not that different. There is a function to read multiple files, ``sc.wholeTextFiles`` this creates a RDD where each book may be processed separately. Use wholeTextFiles and the ``map`` function to return the word counts for each book. Call this function exercise_3_book_word_counts and make sure you put it into Lab3_helper.py.
 
+# ## Run below to check out the expected formats
+
+# +
+from pathlib import Path
+import sys
+home = str(Path.home())
+sys.path.insert(0,f'{home}/csc-369-student/tests')
+
+import joblib
+answers = joblib.load(f'{home}/csc-369-student/tests/answers_Lab3.joblib')
+# -
+
+answers.keys()
+
+answers['exercise_1']
+
+answers['exercise_2']
+
+answers['exercise_3']
+
 
