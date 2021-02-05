@@ -37,7 +37,7 @@
 # ### Update on lab grades
 
 # + [markdown] slideshow={"slide_type": "subslide"}
-# <img src='../labs/grade_summary.png'>
+# <img src='../labs/grade_summary.png' width=600>
 
 # + [markdown] slideshow={"slide_type": "slide"}
 # ## What's wrong with our previous approaches?
@@ -93,7 +93,7 @@
 #     * then reduce over all pairs with the same key
 
 # + [markdown] slideshow={"slide_type": "subslide"}
-# <img src="https://imgix.datadoghq.com/img/blog/hadoop-architecture-overview/hadoop-architecture-diagram1-3.png?auto=format&fit=max&w=847">
+# <img src="https://imgix.datadoghq.com/img/blog/hadoop-architecture-overview/hadoop-architecture-diagram1-3.png?auto=format&fit=max&w=847" width=2000>
 
 # + [markdown] slideshow={"slide_type": "subslide"}
 # ### YARN (Yet Another Resource Negotiator)
@@ -150,8 +150,8 @@
 # * Allows parallel operations upon itself
 # * RDDs can be created from Hadoop InputFormats (such as HDFS files) OR
 # * by transforming other RDDs.
-# -
 
+# + [markdown] slideshow={"slide_type": "subslide"}
 # ### Spark SQL
 # * Designed for processing structured and semi-structured data
 # * Provides a DataFrame API for data manipulations. 

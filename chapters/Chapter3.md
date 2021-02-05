@@ -41,7 +41,7 @@ While this text can be viewed as PDF, it is most useful to have a Jupyter enviro
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-<img src='../labs/grade_summary.png'>
+<img src='../labs/grade_summary.png' width=600>
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -105,7 +105,7 @@ Clients communicate directly with DataNodes
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-<img src="https://imgix.datadoghq.com/img/blog/hadoop-architecture-overview/hadoop-architecture-diagram1-3.png?auto=format&fit=max&w=847">
+<img src="https://imgix.datadoghq.com/img/blog/hadoop-architecture-overview/hadoop-architecture-diagram1-3.png?auto=format&fit=max&w=847" width=2000>
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -172,11 +172,13 @@ Hadoop and Spark work well together, and such a combination is very common. We w
 * by transforming other RDDs.
 <!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": "subslide"} -->
 ### Spark SQL
 * Designed for processing structured and semi-structured data
 * Provides a DataFrame API for data manipulations. 
 * DataFrame is conceptually similar to a table in relational database.
 * Represents a distributed collection of data organized into named columns. 
+<!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 ### MLLib
