@@ -21,7 +21,7 @@ Please review Lab 1 and Lab 2 before proceeding. We will focus on the word count
 
 While you could wrangle your way on this lab using my server, you are much better off heading over to https://community.cloud.databricks.com/. Please do so :)
 
-I'm serious, don't any further until you play around with Databricks.
+I'm serious, don't go any further until you play around with Databricks.
 <!-- #endregion -->
 
 I've noticed during interactions that some folks are skipping the line below. It is my fault for not explaining it. In Python when you import a file it is never reloaded even if the contents change on disk. If you run the cell below before an import, then it will reload automatically for you.
@@ -63,7 +63,7 @@ for line in lines:
 ```
 <!-- #endregion -->
 
-You can check out what is in a directory using:
+You can check out what is in the directory using:
 
 <!-- #region -->
 ```python
