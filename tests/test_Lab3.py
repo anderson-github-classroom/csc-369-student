@@ -41,13 +41,13 @@ def run_exercise_3(func):
     book_word_counts = func(sc,"file:/home/csc-369-student/data/gutenberg/group1")
     entries = []
     for book,word_counts in book_word_counts:
-        temp = counts2set(word_counts)
+        temp = counts2tuple(word_counts)
         entries.append((book,temp))
     return set(entries)
 
-def counts2set(counts):
+def counts2tuple(counts):
     lines = []
-    for key in counts.keys():
+    for key in sorted(list(counts.keys())):
         lines.append((key,counts[key]))
     return tuple(lines)
 
