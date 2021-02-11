@@ -209,9 +209,6 @@ np.dot(A_mat,B_mat)
 
 ```python
 from operator import add
-A_rows = A_RDD.map(lambda kv: (kv[2],kv))
-B_rows = B_RDD.map(lambda kv: (kv[1],kv))
-result = A_rows.join(B_rows).map(lambda entry: ((entry[1][0][1],entry[1][1][2]),entry[1][0][-1] * entry[1][1][-1])).reduceByKey(add).collect()
 result
 ```
 
@@ -243,9 +240,6 @@ B_RDD = sc.parallelize(B)
 
 ```python
 from operator import add
-A_rows = A_RDD.map(lambda kv: (kv[2],kv))
-B_rows = B_RDD.map(lambda kv: (kv[1],kv))
-result = A_rows.join(B_rows).map(lambda entry: ((entry[1][0][1],entry[1][1][2]),entry[1][0][-1] * entry[1][1][-1])).reduceByKey(add).collect()
 result
 ```
 
