@@ -195,6 +195,12 @@ for row_col,val in result:
     result_mat[row-1,col-1] = val
 result_mat
 
+# **Exercise 3:** Implement matrix multiplication using the following alternative format that assumes missing rows have a value of 0 (i.e., sparse matrices):
+#
+# 'Matrix name', 'row number', 'column number', 'value'
+#
+# For this exercise, you cannot use loops or np.dot. It should be Spark centric using join, map, add, reduceByKey, and collect. To submit, you can put your answer into Lab4_helper.py, but do your development on databricks. 
+
 # +
 A = [['A',1,1,1],
      ['A',2,1,3],
