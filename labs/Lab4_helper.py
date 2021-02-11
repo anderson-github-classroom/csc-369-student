@@ -16,3 +16,12 @@ def exercise_1(A_RDD,B_RDD):
     # Your solution here
     return result
 
+def exercise_2(A_RDD,B_RDD):
+    result = None
+    # Your solution here
+    return result
+
+def exercise_3(A_RDD,B_RDD):
+    result = None
+    # Your solution here
+    return result

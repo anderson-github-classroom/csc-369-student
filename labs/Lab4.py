@@ -130,7 +130,7 @@ B2 = B_RDD.map(lambda kv: ("A x B",[get_col(kv[0]),kv[1]]))
 B2.collect()
 
 # **Exercise 1:**
-# Using what I have defined above (A_RDD, B_RDD, A2, B2), the Spark functions (join, map, collect), and the numpy function (np.dot or a loop of your own but why do that...), compute the matrix multiplication of A_RDD and B_RDD.
+# Using what I have defined above (A_RDD, B_RDD, A2, B2), the Spark functions (join, map, collect), and the numpy function (np.dot or a loop of your own but why do that...), compute the matrix multiplication of A_RDD and B_RDD. To submit, you can put your answer into Lab4_helper.py, but do your development on databricks. 
 
 result = Lab4_helper.exercise_1(A_RDD,B_RDD)
 result
@@ -143,9 +143,11 @@ for row_col,value in result:
     R_mat[row-1,col-1] = value
 R_mat
 
-# Alternative format 1:
+# **Exercise 2:** Implement matrix multiplication using the following alternative format:
 #
 # 'Matrix name', 'row number', 'column number', 'value'
+#
+# For this exercise, you cannot use loops or np.dot. It should be Spark centric using join, map, add, reduceByKey, and collect. To submit, you can put your answer into Lab4_helper.py, but do your development on databricks. 
 
 # +
 A = [['A',1,1,1],
@@ -184,7 +186,7 @@ np.dot(A_mat,B_mat)
 
 # <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Matrix_multiplication_diagram_2.svg/440px-Matrix_multiplication_diagram_2.svg.png">
 
-from operator import add
+result = Lab4_helper.exercise_2(A_RDD,B_RDD)
 result
 
 result_mat = np.zeros((4,3))
@@ -211,7 +213,7 @@ B = [['B',1,1,7],
 B_RDD = sc.parallelize(B)
 # -
 
-from operator import add
+result = Lab4_helper.exercise_3(A_RDD,B_RDD)
 result
 
 result_mat = np.zeros((4,3))
@@ -219,5 +221,8 @@ for row_col,val in result:
     row,col = row_col
     result_mat[row-1,col-1] = val
 result_mat
+
+# Good job!
+# Don't forget to push with ./submit.sh
 
 
