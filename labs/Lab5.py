@@ -140,9 +140,6 @@ example1.orderBy('YearMonth').show()
 # * Must be ordered by YearMonth, Carrier
 
 airline_delay = Lab5_helper.exercise_1(on_time_df)
-## BEGIN ANSWER
-answers['exercise_1'] = airline_delay.head(10)
-## END ANSWER
 airline_delay.show()
 
 # **Exercise 2:** Now add a column with the airline name (i.e., use a join). Here is an example from the Spark documentation.
@@ -157,9 +154,6 @@ airline_delay.show()
 # ```
 
 airline_delay2 = Lab5_helper.exercise_2(airline_delay,airlines)
-## BEGIN ANSWER
-answers['exercise_2'] = airline_delay2.head(10)
-## END ANSWER
 airline_delay2.show()
 
 # If you did everything correctly, you are now rewarded with a nice graph :)
@@ -182,9 +176,6 @@ alt.Chart(airline_delay_pd).mark_line().encode(
 
 # +
 data_for_corr = Lab5_helper.exercise_3(airline_delay2)
-## BEGIN ANSWER
-answers['exercise_3'] = data_for_corr.toPandas()
-## END ANSWER
 
 # The data is now small enough to handle, so let's get it into pandas and calculate the correlation and filling
 # in missing values with the mean of the column
