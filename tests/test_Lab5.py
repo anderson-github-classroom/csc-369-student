@@ -37,7 +37,7 @@ def run_exercise_2():
 
     return airline_delay2.head(10)
 
-def run_exercise_3(func):
+def run_exercise_3():
     airline_delay = Lab5_helper.exercise_1(on_time_df)
     airline_delay2 = Lab5_helper.exercise_2(airline_delay,airlines)
     data_for_corr = Lab5_helper.exercise_3(airline_delay2).toPandas()
