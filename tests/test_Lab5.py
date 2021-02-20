@@ -51,4 +51,4 @@ def test_exercise_2():
     assert set(answers['exercise_2']) == set(run_exercise_2())
 
 def test_exercise_3():
-    assert answers['exercise_3'].equals(run_exercise_3(Lab4_helper.exercise_3))
+    assert answers['exercise_3'].equals(run_exercise_3())
