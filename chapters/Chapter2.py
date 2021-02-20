@@ -395,36 +395,18 @@ g
 #
 # ### 1. What is a decorator and what do we use them in Ray to accomplish?
 #
-# ### BEGIN ANSWER
-#
-# A decorator is a function that add features from an external library to an existing function. We use decorators in Ray to change an existing function into one that can be called in a parallel fashion using myfunc.remove().
-# ### END ANSWER
 #
 # ### 2. Can you call a function that has a Ray decorator in the normal Python way?
 #
-# #### BEGIN ANSWER
-#
-# No. This will generate an error.
-# #### END ANSWER
 #
 # ### 3. Explain what futures are in Ray and why they are important?
 #
-# #### BEGIN ANSWER
-# Ray executes code on your behalf in an asynchronous manner. You need a way to tell Ray to start executing on your behalf, but you cannot wait for the result before moving on in your program. If you waited for the result, you could never start more than one task at a time. Therefore, Ray returns immediately and what it returns to you is a future object reference that may be used to get your results in the future.
-#
-# #### END ANSWER
 #
 # ### 4. How would you compare Ray and Dask?
 #
-# ### BEGIN ANSWER
-# Ray and Dask can solve a lot of the same distributed computing problems. They are both widely used and have active communities. The differ in some of their primary use cases. Ray is traditionally more compute focused while Dask is more data focused. This can be seen in Dask's focus on implementing a subset of the Pandas API.
-# ### END ANSWER
 #
 # ### 5. Does Dask use futures? How do you compare them to Ray futures? How do you tell Dask to execute and produce a result?
 #
-# ### BEGIN ANSWER
-# Yes. Dask returns their version of a future object reference. Generally speaking, one of the differences is that Dask does not executing your task until you call ``.compute()``. This is a blocking call that will hold until the result is ready. 
-# ### END ANSWER
 # -
 
 

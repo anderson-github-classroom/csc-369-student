@@ -325,18 +325,10 @@ alt.Chart(plot_df.set_index('word').loc[top_words].reset_index()).mark_bar().enc
 # ## Questions
 # 1. Describe an instance where you would reach for GNU parallel instead of more advanced and integrated solutions.
 #
-# ### BEGIN ANSWER
-#
-# Parallel is suited to problems where a sophisticated command line program exists that may be used in parallel to solve your problem. An example of this would be analyzing web logs with the program called scalp. 
-# ### END ANSWER
 #
 # 2. When solving a distributed computing problem, what doesn't GNU parallel do for you? What did you have to implement in the lab?
 #
 #
-# ### BEGIN ANSWER
-#
-# Parallel does not decompose your solution into independent subtasks. It also does not provide support for combining/merging/reducing the results of the subtasks into a solution for the entire problem.
-# ### END ANSWER
 #
 #
 
