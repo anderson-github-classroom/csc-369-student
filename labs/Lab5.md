@@ -166,6 +166,10 @@ df.withColumnRenamed("dob","DateOfBirth").printSchema()
 * Must be ordered by YearMonth, Carrier
 
 ```python
+set(airline_delay.head(10))
+```
+
+```python
 airline_delay = Lab5_helper.exercise_1(on_time_df)
 airline_delay.show()
 ```

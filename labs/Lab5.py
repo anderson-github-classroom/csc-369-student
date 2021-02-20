@@ -139,6 +139,8 @@ example1.orderBy('YearMonth').show()
 # * Carrier must be one of the following: 'AA','WN','DL','UA','MQ','EV','AS','VX'
 # * Must be ordered by YearMonth, Carrier
 
+set(airline_delay.head(10))
+
 airline_delay = Lab5_helper.exercise_1(on_time_df)
 airline_delay.show()
 
