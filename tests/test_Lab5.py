@@ -11,11 +11,9 @@ DIR=pathlib.Path(__file__).parent.absolute()
 import joblib 
 answers = joblib.load(str(DIR)+"/answers_Lab5.joblib")
 
-from pyspark import SparkContext
-from pyspark import SparkConf
-from pyspark.context import SparkContext
+from pyspark import SparkSession
 
-from pyspark.sql import SparkSession
+#from pyspark.sql import SparkSession
 
 spark = SparkSession \
     .builder \
