@@ -2,9 +2,6 @@ import sys
 import os
 sys.path.append(".")
 
-# Import the student solutions
-import Lab5_helper
-
 import pathlib
 DIR=pathlib.Path(__file__).parent.absolute()
 
@@ -21,6 +18,9 @@ spark = SparkSession \
     .getOrCreate()
 
 sc = spark.sparkContext
+
+# Import the student solutions
+import Lab5_helper
 
 on_time_df = spark.read.parquet('file:///disk/airline-data-processed/airline-data.parquet')
 airlines = spark.read.parquet('file:///disk/airline-data/DOT_airline_codes_table')
