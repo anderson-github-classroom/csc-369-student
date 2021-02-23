@@ -169,6 +169,18 @@
 # + [markdown] slideshow={"slide_type": "subslide"}
 # ### GraphX
 # <a href="https://spark.apache.org/graphx/">https://spark.apache.org/graphx/</a>
+# -
+
+# ## Questions
+
+# ### 1. What are the main responsibilities of the NameNode?
+#
+
+# ### 2. In general terms (i.e., don't get into Spark and language details), what is the output of the map stage?
+#
+
+# ### 3. Has Spark replaced Hadoop? Should it replace Hadoop?
+#
 
 # + [markdown] slideshow={"slide_type": "subslide"}
 # ## Conclusion

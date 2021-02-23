@@ -195,6 +195,20 @@ Hadoop and Spark work well together, and such a combination is very common. We w
 <a href="https://spark.apache.org/graphx/">https://spark.apache.org/graphx/</a>
 <!-- #endregion -->
 
+## Questions
+
+
+### 1. What are the main responsibilities of the NameNode?
+
+
+
+### 2. In general terms (i.e., don't get into Spark and language details), what is the output of the map stage?
+
+
+
+### 3. Has Spark replaced Hadoop? Should it replace Hadoop?
+
+
 <!-- #region slideshow={"slide_type": "subslide"} -->
 ## Conclusion
 * Hadoop and Spark make up two pillars of the modern data engineering ecosystem. 

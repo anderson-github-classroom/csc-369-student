@@ -207,6 +207,25 @@
 # + [markdown] slideshow={"slide_type": "subslide"}
 # ### Narrow versus wide dependencies
 # <img src="https://miro.medium.com/max/1266/0*kAw8hogu1oZPy9QU.png">
+# -
+
+# ## Questions
+
+# ### 1. What are some of the responsibilities of the spark context?
+#
+
+# ### 2. How does Spark achieve fault tolerance?
+#
+
+# ### 3. What is the difference between RDDs and distributed shared memory?
+#
+#
+#
+
+# ### 4. What is lazy evaluation in Spark?
+#
+#
+#
 
 # + [markdown] slideshow={"slide_type": "subslide"}
 # ## Wrap-up

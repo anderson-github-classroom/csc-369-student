@@ -243,6 +243,28 @@ Data shuffling is needed
 <img src="https://miro.medium.com/max/1266/0*kAw8hogu1oZPy9QU.png">
 <!-- #endregion -->
 
+## Questions
+
+
+### 1. What are some of the responsibilities of the spark context?
+
+
+
+### 2. How does Spark achieve fault tolerance?
+
+
+
+### 3. What is the difference between RDDs and distributed shared memory?
+
+
+
+
+
+### 4. What is lazy evaluation in Spark?
+
+
+
+
 <!-- #region slideshow={"slide_type": "subslide"} -->
 ## Wrap-up
 As is always the case, there is a lot more to the core Spark API. For example, we haven't discussed the scheduler in detail. But I believe we now have a better feel for what drives computations on Spark. We understand some of the differences between operations in Spark. And finally, we understand why Spark RDDs are preferred over Hadoop in many applications. 
