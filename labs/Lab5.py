@@ -139,12 +139,10 @@ example1.orderBy('YearMonth').show()
 # * Carrier must be one of the following: 'AA','WN','DL','UA','MQ','EV','AS','VX'
 # * Must be ordered by YearMonth, Carrier
 
-set(airline_delay.head(10))
-
 airline_delay = Lab5_helper.exercise_1(on_time_df)
 airline_delay.show()
 
-# **Exercise 2:** Now add a column with the airline name (i.e., use a join). Here is an example from the Spark documentation.
+# **Exercise 2:** Now add a column with the airline name (i.e., use a join). Here is an example from the Spark documentation. Please order your result by YearMonth and Carrier.
 #
 # ```python
 # # To create DataFrame using SparkSession

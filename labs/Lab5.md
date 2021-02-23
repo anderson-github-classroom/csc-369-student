@@ -166,16 +166,12 @@ df.withColumnRenamed("dob","DateOfBirth").printSchema()
 * Must be ordered by YearMonth, Carrier
 
 ```python
-set(airline_delay.head(10))
-```
-
-```python
 airline_delay = Lab5_helper.exercise_1(on_time_df)
 airline_delay.show()
 ```
 
 <!-- #region -->
-**Exercise 2:** Now add a column with the airline name (i.e., use a join). Here is an example from the Spark documentation.
+**Exercise 2:** Now add a column with the airline name (i.e., use a join). Here is an example from the Spark documentation. Please order your result by YearMonth and Carrier.
 
 ```python
 # To create DataFrame using SparkSession

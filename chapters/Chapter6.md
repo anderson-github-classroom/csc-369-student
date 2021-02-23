@@ -51,12 +51,12 @@ While this text can be viewed as PDF, it is most useful to have a Jupyter enviro
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 ## What is NoSQL?
-<img src="https://www.kdnuggets.com/wp-content/uploads/sql-nosql-dbs.jpg">
+<img src="https://www.kdnuggets.com/wp-content/uploads/sql-nosql-dbs.jpg" width=700>
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 ### Pros and Cons
-<img src="https://www.clariontech.com/hs-fs/hubfs/SQL-NOSQL.png?width=813&name=SQL-NOSQL.png" width=400>
+<img src="https://www.clariontech.com/hs-fs/hubfs/SQL-NOSQL.png?width=813&name=SQL-NOSQL.png" width=700>
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
