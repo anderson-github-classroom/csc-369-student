@@ -134,7 +134,7 @@ example1.orderBy('YearMonth').show()
 # df.withColumnRenamed("dob","DateOfBirth").printSchema()
 # ```
 
-# **Exercise 1:** Create a dataframe that contains the average delay for each airline:
+# **Exercise 1:** Create a dataframe that contains the average delay for each airline for each month:
 # * Columns: Carrier, average_delay, YearMonth
 # * Carrier must be one of the following: 'AA','WN','DL','UA','MQ','EV','AS','VX'
 # * Must be ordered by YearMonth, Carrier
