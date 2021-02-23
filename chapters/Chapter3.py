@@ -175,12 +175,18 @@
 
 # ### 1. What are the main responsibilities of the NameNode?
 #
+#
+# #### Your solution here
 
 # ### 2. In general terms (i.e., don't get into Spark and language details), what is the output of the map stage?
 #
+#
+# #### Your solution here
 
 # ### 3. Has Spark replaced Hadoop? Should it replace Hadoop?
 #
+#
+# #### Your solution here
 
 # + [markdown] slideshow={"slide_type": "subslide"}
 # ## Conclusion

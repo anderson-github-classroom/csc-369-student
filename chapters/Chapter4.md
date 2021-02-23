@@ -249,21 +249,25 @@ Data shuffling is needed
 ### 1. What are some of the responsibilities of the spark context?
 
 
+#### Your solution here
+
 
 ### 2. How does Spark achieve fault tolerance?
 
+
+#### Your solution here
 
 
 ### 3. What is the difference between RDDs and distributed shared memory?
 
 
-
+#### Your solution here
 
 
 ### 4. What is lazy evaluation in Spark?
 
 
-
+#### Your solution here
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 ## Wrap-up
