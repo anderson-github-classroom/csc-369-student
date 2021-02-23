@@ -164,6 +164,7 @@ df.withColumnRenamed("dob","DateOfBirth").printSchema()
 * Columns: Carrier, average_delay, YearMonth
 * Carrier must be one of the following: 'AA','WN','DL','UA','MQ','EV','AS','VX'
 * Must be ordered by YearMonth, Carrier
+* The column to aggregate is ArrDelay
 
 ```python
 airline_delay = Lab5_helper.exercise_1(on_time_df)

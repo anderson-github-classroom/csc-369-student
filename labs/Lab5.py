@@ -138,6 +138,7 @@ example1.orderBy('YearMonth').show()
 # * Columns: Carrier, average_delay, YearMonth
 # * Carrier must be one of the following: 'AA','WN','DL','UA','MQ','EV','AS','VX'
 # * Must be ordered by YearMonth, Carrier
+# * The column to aggregate is ArrDelay
 
 airline_delay = Lab5_helper.exercise_1(on_time_df)
 airline_delay.show()
