@@ -55,10 +55,12 @@ While this text can be viewed as PDF, it is most useful to have a Jupyter enviro
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-<img src="https://www.clariontech.com/hs-fs/hubfs/SQL-NOSQL.png?width=813&name=SQL-NOSQL.png">
+### Pros and Cons
+<img src="https://www.clariontech.com/hs-fs/hubfs/SQL-NOSQL.png?width=813&name=SQL-NOSQL.png" width=400>
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
+### What performance considerations? Why is this desired in some applications?
 <img src="https://www.guru99.com/images/1/101818_0537_NoSQLTutori2.png">
 <!-- #endregion -->
 
@@ -83,26 +85,39 @@ Put another way:
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-## What is distributed?
+### What is partition tolerance?
+> A partition is a communications break within a distributed system—a lost or temporarily delayed connection between two nodes. Partition tolerance means that the cluster must continue to work despite any number of communication breakdowns between nodes in the system.
+
+Source: https://www.ibm.com/cloud/learn/cap-theorem#:~:text=request%2C%20without%20exception.-,Partition%20tolerance,between%20nodes%20in%20the%20system.
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "subslide"} -->
+## What is distributed for performance gains?
 <img src="https://i2.wp.com/www.kenwalger.com/blog/wp-content/uploads/2017/06/ShardingExample.png?resize=600%2C366">
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-<img src="https://devops.com/wp-content/uploads/2017/02/cap-theorem.jpg">
+<img src="https://devops.com/wp-content/uploads/2017/02/cap-theorem.jpg" width=600>
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
-## And just because I found it and wanted to share this image:
+## Don't forget about the 8 fallacies...
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 <img src="http://www.mypassionfor.net/wp-content/uploads/2020/03/8-fallacies-of-distributed-computing-1024x714.png">
 <!-- #endregion -->
 
-## Good online book for MongoDB
+<!-- #region slideshow={"slide_type": "subslide"} -->
+**The rest of this chapter is covered in**
 <a href="https://beginnersbook.com/2017/09/introduction-to-nosql/">https://beginnersbook.com/2017/09/introduction-to-nosql/</a>
+<!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
 ## Wrap-up
-In addition to the Spark Core API, Spark provides convienent and flexible mechanisms to access structured data.
+We have introduced NoSQL databases and discussed their overall features, pros, cons, design considerations, and functionality.
 <!-- #endregion -->
+
+```python
+
+```
