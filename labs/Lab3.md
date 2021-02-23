@@ -39,6 +39,12 @@ import Lab3_helper
 ## Spark
 There is a lot to unpack when being introduced to Spark and Hadoop. We are going to do a little bit at a time.
 
+```python
+from pyspark import SparkConf
+from pyspark.context import SparkContext
+
+sc = SparkContext.getOrCreate(SparkConf().setMaster("local[*]"))
+```
 
 ### Databricks
 
