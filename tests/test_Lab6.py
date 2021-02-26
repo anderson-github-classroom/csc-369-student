@@ -32,7 +32,7 @@ def test_exercise_1():
     assert answers['exercise_1'] == run_exercise_1()
 
 def test_exercise_2():
-    assert set(answers['exercise_2']) == set(run_exercise_2())
+    assert answers['exercise_2'] == run_exercise_2()
 
 def test_exercise_3():
-    assert set(answers['exercise_3']) == set(run_exercise_3())
+    assert answers['exercise_3'] == run_exercise_3()
