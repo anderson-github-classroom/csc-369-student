@@ -15,7 +15,7 @@ jupyter:
 ---
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# Lab 6 - MongoDB Introduction
+# Lab 7 - MongoDB
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->
@@ -32,7 +32,7 @@ may be a sensitive issue to some of you. Please reach out to me.
 
 ## Introduction to pymongo
 
-We will be using pymongo for our mongo labs. For this first lab, we will be working through a subset of this tutorial (https://pymongo.readthedocs.io/en/stable/tutorial.html) on our own dataset.
+We will be using pymongo for our mongo labs. This lab focuses on queries and aggregation in MongoDB.
 
 I have inserted ``data/daily.json`` into the database in the collection called ``daily`` in a database called ``csc-369``. You may gain access to it using the following commands:
 
@@ -118,32 +118,56 @@ I've noticed during interactions that some folks are skipping the line below. It
 
 ```python slideshow={"slide_type": "skip"}
 # make sure your run the cell above before running this
-import Lab6_helper
+import Lab7_helper
 ```
 
-**NOTE:** For this lab, I am working directly from the tutorial linked above. Solutions to this lab are modifications of commands you can find there. 
-
-
-**Exercise 1:** Use find_one to find a record with an object ID equal to 60392e3656264fee961ca817. As always, put your solution in Lab6_helper.
+**Exercise 1:** Write a function that returns the total number of positive cases and the number of new cases
+in New York state on April 1.
 
 ```python
-record = Lab6_helper.exercise_1(col,'60392e3656264fee961ca817')
+record = Lab7_helper.exercise_1(col)
 record
 ```
 
-**Exercise 2:** Use count_documents to count the number of records/documents that have ``state`` equal to 'CA'. 
+**Exercise 2:** Write a function that returns the date, how many positive cases and how many deaths were in the state of New Jersey on the earliest day when the total cumulative
+number of deaths exceeded 500.
+
+> .sort(), in pymongo, takes key and direction as parameters.
+> So if you want to sort by, let's say, id then you should .sort("_id", 1)
 
 ```python
-record = Lab6_helper.exercise_2(col,'CA')
+record = Lab7_helper.exercise_2(col)
 record
 ```
 
-**Exercise 3:** Write a function that returns all of the documents that have a date less than ``d``. Sort the documents by the data, and convert the result to a list.
+**Exercise 3:** Write a function using ``aggregate``. The function reports the count and the cumulative increase in positive cases (when there were positive cases) within the date range (inclusive). Do not include missing days or values. I used \$match, \$group, and \$and within aggregate. The columns I used are date, state, and positiveIncrease.
 
 ```python
-d = 20200315 # YYYY-MM-DD
-record = Lab6_helper.exercise_3(col,d)
+result = list(Lab7_helper.exercise_3(col,20200401,20200402))
+import pprint
+pprint.pprint((result))
+
+record = Lab7_helper.process_exercise_3(result)
 record
+```
+
+```python
+record['AZ'],record['AL']
+```
+
+**Exercise 4:** Repeat exercise 3, but instead of using aggregate you must use map-reduce.
+
+```python
+result = list(Lab7_helper.exercise_4(col,20200401,20200402).find())
+import pprint
+pprint.pprint((result))
+
+record = Lab7_helper.process_exercise_4(result)
+record
+```
+
+```python
+record['AZ'],record['AL']
 ```
 
 ```python
