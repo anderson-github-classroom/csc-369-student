@@ -29,5 +29,5 @@ def test_exercise_3():
     assert answers['exercise_3'] == helper.process_exercise_3(result)
 
 def test_exercise_4():
-    result = list(helper.exercise_4(col,20200401,20200402))
+    result = list(helper.exercise_4(col,20200401,20200402).find())
     assert answers['exercise_4'] == helper.process_exercise_4(result)
