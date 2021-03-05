@@ -129,8 +129,7 @@ record = Lab7_helper.exercise_1(col)
 record
 ```
 
-**Exercise 2:** Write a function that returns the date, how many positive cases and how many deaths were in the state of New Jersey on the earliest day when the total cumulative
-number of deaths exceeded 500.
+**Exercise 2:** Write a function that returns how many deaths were in the state of New Jersey on the earliest day when the total cumulative number of deaths exceeded 500.
 
 > .sort(), in pymongo, takes key and direction as parameters.
 > So if you want to sort by, let's say, id then you should .sort("_id", 1)
